@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    types: [opened, synchronize, reopened, closed]
-    branches:
-      - main
+# Using Pull instead for Automatic updates. This needs to be commented out to avoid conflicts. 
+# https://docs.cipp.app/setup/self-hosting-guide/configuring-automatic-updates#id-2.-remove-pull_request-triggers-in-your-existing-workflow
+#  pull_request:
+#    types: [opened, synchronize, reopened, closed]
+#    branches:
+#      - main
 
 jobs:
   build_and_deploy_job:
